@@ -16,12 +16,7 @@ from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Load the dataset (replace 'car_price_dataset.csv' with the actual path)
-try:
-    df = pd.read_csv('car_price_dataset.csv')
-except FileNotFoundError:
-    print("Error: 'car_price_dataset.csv' not found. Please provide the correct path.")
-    exit()
+df=pd.read_csv('/content/drive/MyDrive/Colab Notebooks/car_price_dataset.csv)
 
 # Handle missing values (if any) - Example: fill with mean for numerical columns
 for col in df.select_dtypes(include=np.number).columns:
